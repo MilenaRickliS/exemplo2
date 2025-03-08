@@ -27,6 +27,36 @@ class LayoutDemo extends StatelessWidget
               color: Colors.grey,
               borderRadius: BorderRadius.circular(8.0),
             ),
+            //linha horizontal
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly, //espaço igual entre os elementos
+              crossAxisAlignment: CrossAxisAlignment.center,
+
+              children: <Widget>[
+                CircleAvatar(
+                  radius: 40.0,
+                  backgroundImage: NetworkImage('https://i.pinimg.com/736x/20/b9/41/20b941c237be1aed6efbe5e9facda4cc.jpg'
+                  ),                  
+                ),
+                SizedBox(width: 16.0),
+                  Expanded(child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Avatar',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      Text(
+                        'Desenvolvedor Flutter',
+                      ),
+                    ],
+                  ),
+                  )
+              ],
+            ),
           ),
         ],
       ),
